@@ -1,209 +1,349 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>My Website 🚀</title>
+<title>Fafi & Abin 🐶 | Dog Shop</title>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    html {
-      scroll-behavior: smooth;
-    }
+html {
+    scroll-behavior: smooth;
+}
 
-    body {
-      font-family: Arial, sans-serif;
-      background: #0f172a;
-      color: white;
-      line-height: 1.6;
-    }
+body {
+    font-family: Arial, sans-serif;
+    background: #fffaf3;
+    color: #333;
+    line-height: 1.6;
+}
 
+nav {
+    background: #111827;
+    padding: 18px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 18px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #f59e0b;
+}
+
+.hero {
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px 20px;
+    background: linear-gradient(135deg, #fff7ed, #fde68a);
+}
+
+.hero h1 {
+    font-size: 48px;
+    color: #111827;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 20px;
+    max-width: 650px;
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    background: #f59e0b;
+    color: white;
+    text-decoration: none;
+    padding: 14px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+    margin: 5px;
+}
+
+.btn:hover {
+    background: #d97706;
+}
+
+section {
+    padding: 70px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 34px;
+    margin-bottom: 40px;
+    color: #111827;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+}
+
+.dog-icon {
+    font-size: 65px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    color: #111827;
+    margin-bottom: 10px;
+}
+
+.price {
+    color: #f59e0b;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 12px 0;
+}
+
+.about {
+    background: #111827;
+    color: white;
+    max-width: none;
+    text-align: center;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: auto;
+}
+
+.about h2 {
+    font-size: 34px;
+    margin-bottom: 20px;
+}
+
+.contact-box {
+    background: white;
+    padding: 30px;
+    border-radius: 18px;
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.contact-box p {
+    margin: 12px 0;
+    font-size: 18px;
+}
+
+footer {
+    background: #111827;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+@media (max-width: 600px) {
     nav {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: #020617;
-      padding: 15px 20px;
-      text-align: center;
-      border-bottom: 1px solid #334155;
+        flex-direction: column;
+        gap: 10px;
     }
 
     nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 10px;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      color: #38bdf8;
-    }
-
-    .hero {
-      min-height: 90vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 30px 20px;
-      background: linear-gradient(135deg, #0f172a, #1e3a8a);
+        margin: 0 6px;
+        font-size: 14px;
     }
 
     .hero h1 {
-      font-size: 45px;
-      margin-bottom: 15px;
+        font-size: 36px;
     }
 
     .hero p {
-      font-size: 20px;
-      color: #cbd5e1;
-      margin-bottom: 25px;
+        font-size: 17px;
     }
 
-    .btn {
-      display: inline-block;
-      padding: 12px 25px;
-      background: #38bdf8;
-      color: #020617;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
+    .section-title {
+        font-size: 28px;
     }
-
-    .btn:hover {
-      background: #7dd3fc;
-    }
-
-    section {
-      padding: 70px 20px;
-      text-align: center;
-    }
-
-    section h2 {
-      font-size: 32px;
-      margin-bottom: 20px;
-      color: #38bdf8;
-    }
-
-    .card-container {
-      max-width: 1000px;
-      margin: 30px auto;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-    }
-
-    .card {
-      background: #1e293b;
-      padding: 25px;
-      border-radius: 12px;
-      width: 280px;
-      border: 1px solid #334155;
-    }
-
-    .card h3 {
-      margin-bottom: 10px;
-      color: #7dd3fc;
-    }
-
-    .contact {
-      background: #020617;
-    }
-
-    .contact p {
-      margin: 10px 0;
-    }
-
-    footer {
-      background: #000;
-      text-align: center;
-      padding: 20px;
-      color: #94a3b8;
-    }
-
-    @media (max-width: 600px) {
-      .hero h1 {
-        font-size: 35px;
-      }
-
-      nav a {
-        margin: 0 5px;
-        font-size: 14px;
-      }
-    }
-  </style>
+}
+</style>
 </head>
 
 <body>
 
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<nav>
+    <div class="logo">🐶 Fafi & Abin</div>
 
-  <section id="home" class="hero">
-    <h1>Welcome 🚀</h1>
-    <p>Welcome to my personal website</p>
-    <a href="#about" class="btn">Explore</a>
-  </section>
+    <div>
+        <a href="#home">Home</a>
+        <a href="#shop">Shop</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
 
-  <section id="about">
-    <h2>About Me</h2>
+<section class="hero" id="home">
+    <h1>🐾 Fafi & Abin 🐾</h1>
+
     <p>
-      Hello! Welcome to my website.
-      This website was created with HTML and CSS.
+        Welcome to Fafi & Abin Dog Shop!
+        Find everything your best friend needs.
     </p>
-  </section>
 
-  <section id="services">
-    <h2>My Services</h2>
+    <div>
+        <a href="#shop" class="btn">🛍️ Shop Now</a>
+        <a href="#contact" class="btn">📞 Contact Us</a>
+    </div>
+</section>
 
-    <div class="card-container">
+<section id="shop">
 
-      <div class="card">
-        <h3>🌐 Website</h3>
-        <p>Modern and responsive websites.</p>
-      </div>
+    <h2 class="section-title">🐶 Our Dog Products</h2>
 
-      <div class="card">
-        <h3>💻 Coding</h3>
-        <p>HTML, CSS and basic web development.</p>
-      </div>
+    <div class="products">
 
-      <div class="card">
-        <h3>🚀 Projects</h3>
-        <p>Creative and useful web projects.</p>
-      </div>
+        <div class="card">
+            <div class="dog-icon">🦴</div>
+            <h3>Dog Food</h3>
+            <p>Healthy and tasty food for your lovely dog.</p>
+            <div class="price">ETB 500</div>
+            <a href="#contact" class="btn">Order</a>
+        </div>
+
+        <div class="card">
+            <div class="dog-icon">🧸</div>
+            <h3>Dog Toys</h3>
+            <p>Fun toys to keep your dog happy and active.</p>
+            <div class="price">ETB 300</div>
+            <a href="#contact" class="btn">Order</a>
+        </div>
+
+        <div class="card">
+            <div class="dog-icon">🦮</div>
+            <h3>Dog Leash</h3>
+            <p>Strong and comfortable leash for daily walks.</p>
+            <div class="price">ETB 450</div>
+            <a href="#contact" class="btn">Order</a>
+        </div>
+
+        <div class="card">
+            <div class="dog-icon">🏠</div>
+            <h3>Dog House</h3>
+            <p>A comfortable home for your best friend.</p>
+            <div class="price">ETB 2,500</div>
+            <a href="#contact" class="btn">Order</a>
+        </div>
+
+        <div class="card">
+            <div class="dog-icon">🛏️</div>
+            <h3>Dog Bed</h3>
+            <p>Soft and comfortable beds for peaceful sleep.</p>
+            <div class="price">ETB 1,200</div>
+            <a href="#contact" class="btn">Order</a>
+        </div>
+
+        <div class="card">
+            <div class="dog-icon">🧴</div>
+            <h3>Dog Shampoo</h3>
+            <p>Keep your dog clean, fresh and healthy.</p>
+            <div class="price">ETB 350</div>
+            <a href="#contact" class="btn">Order</a>
+        </div>
 
     </div>
-  </section>
+</section>
 
-  <section id="contact" class="contact">
-    <h2>Contact Me</h2>
+<section class="about" id="about">
 
-    <p>📧 Email: your@email.com</p>
-    <p>📱 Phone: +251 900 000 000</p>
+    <div class="about-content">
 
-    <br>
+        <h2>❤️ About Fafi & Abin</h2>
 
-    <a href="mailto:your@email.com" class="btn">
-      Send Email
-    </a>
-  </section>
+        <p>
+            Fafi & Abin is a dog-loving shop created to provide
+            quality products for dogs and their families.
+        </p>
 
-  <footer>
-    <p>© 2026 My Website 🚀 | All Rights Reserved</p>
-  </footer>
+        <br>
+
+        <p>
+            🐕 Quality products &nbsp; | &nbsp;
+            ❤️ Dog lovers &nbsp; | &nbsp;
+            ⭐ Happy customers
+        </p>
+
+    </div>
+
+</section>
+
+<section id="contact">
+
+    <h2 class="section-title">📞 Contact Fafi & Abin</h2>
+
+    <div class="contact-box">
+
+        <p>📱 Phone: <strong>+251 951699871</strong></p>
+
+        <p>📧 Email: <strong>fafifaf2406@gmail.com</strong></p>
+
+        <p>📍 Location: <strong>Addis Ababa, Ethiopia</strong></p>
+
+        <br>
+
+        <a href="tel:+251951699871&0985858422" class="btn">
+            📞 Call Us
+        </a>
+
+        <a href="https://wa.me/251985858422&0951699871" class="btn">
+            💬 WhatsApp
+        </a>
+
+    </div>
+
+</section>
+
+<footer>
+
+    <p>© 2026 Fafi & Abin 🐶. All Rights Reserved.</p>
+
+    <p>Made with ❤️ for dog lovers.</p>
+
+</footer>
 
 </body>
   </html>
